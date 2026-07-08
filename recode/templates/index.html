@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Ascii-Web</title>
+</head>
+
+<body>
+    <h1>Welcome</h1>
+
+    <form action="/ascii-art" method="POST">
+        <label for="text">Enter Text</label><br>
+        <textarea name="text" id="text"></textarea><br>
+        <label for="banner">Select Banner</label><br>
+        <select name="banner" id="banner">
+            <option value="standard">Standard</option>
+            <option value="shadow">Shadow</option>
+            <option value="thinkertoy">Thinkertoy</option>
+        </select>
+        <br>
+        <button type="submit">Generate</button>
+    </form>
+
+    {{if .Result}}
+    <h2>Result</h2>
+
+    <pre>{{.Result}}</pre>
+
+    <a href="/ascii-art-switch?text={{.Text}}&banner=standard" class="active">Standard</a>
+    <a href="/ascii-art-switch?text={{.Text}}&banner=shadow" class="active">Shadow</a>
+    <a href="/ascii-art-switch?text={{.Text}}&banner=thinkertoy" class="active">Thinkertoy</a>
+    {{end}}
+</body>
+
+</html>

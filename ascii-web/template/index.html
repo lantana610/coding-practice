@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text</title>
+
+    <style>
+        h1 {
+            color: brown;
+        }
+
+        body {
+            background-color: rgb(101, 173, 53);
+        } 
+    </style>
+</head>
+<body>
+    <h1>ascii-web</h1>
+    <form action="/ascii-art" method="POST">
+    <textarea name="text"></textarea>
+    <select name="banner">
+    <option>standard</option>
+     <option>shadow</option>
+    <option>thinkertoy</option>
+    </select>
+    <button name="submit"> generate</button>
+</form>
+
+<hr>
+<prev>
+    {{.}}
+</prev>
+
+</body>
+</html>
